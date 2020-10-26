@@ -2,13 +2,54 @@ import requests
 
 
 def list_of_presidents():
-    return "Esteban"
+    return [
+        "Washington",
+        "Adams",
+        "Jefferson",
+        "Madison",
+        "Monroe",
+        "Adams",
+        "Jackson",
+        "Buren",
+        "Harrison",
+        "Tyler",
+        "Polk",
+        "Taylor",
+        "Fillmore",
+        "Pierce",
+        "Buchanan",
+        "Lincoln",
+        "Johnson",
+        "Grant",
+        "Hayes",
+        "Garfield",
+        "Arthur",
+        "Cleveland",
+        "Harrison",
+        "Cleveland",
+        "McKinley",
+        "Roosevelt",
+        "Taft",
+        "Wilson",
+        "Harding",
+        "Coolidge",
+        "Hoover",
+        "Roosevelt",
+        "Truman",
+        "Eisenhower",
+        "Kennedy",
+        "Johnson",
+        "Nixon",
+        "Ford",
+        "Carter",
+        "Reagan",
+        "Bush",
+        "Clinton",
+        "Bush",
+        "Obama",
+        "Trump"
+    ]
 
 
 def main():
-    url_ddg = "https://api.duckduckgo.com"
-    resp = requests.get(url_ddg + "/?q=DuckDuckGo&format=json")
-    rsp_data = resp.json()
-    print("Hello")
-    print(list_of_presidents())
-    print(rsp_data)
+    print("Lab 10")

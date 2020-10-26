@@ -6,7 +6,15 @@ from duckduckrest.duck_duck_rest import list_of_presidents
 url_ddg = "https://api.duckduckgo.com"
 
 
-def test_ddg0():
-    resp = requests.get(url_ddg + "/?q=presidents+of+united+states&format=json")
+def test_president_list():
+    resp = requests.get(url_ddg + "/?q=presidents+of+the+united+states&format=json")
     rsp_data = resp.json()
-    assert "DuckDuckGo" in rsp_data["Heading"]
+    president_list = list_of_presidents()
+    is_present = False
+
+    for p in president_list:
+        for last_name in rsp_data["RelatedTopics"]:
+            if p in last_name["Text"]:
+                is_present = True
+
+    assert is_present
